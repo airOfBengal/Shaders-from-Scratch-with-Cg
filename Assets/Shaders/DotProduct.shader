@@ -14,8 +14,8 @@ Shader "Custom/DotProduct"
 
         void surf (Input IN, inout SurfaceOutput o)
         {
-            half dotp  = dot(IN.viewDir, o.Normal);
-            o.Albedo = float3(1, dotp, 1);
+            half dotp  = 1 - dot(IN.viewDir, o.Normal);
+            o.Albedo = float3(0, dotp, 1);
         }
         ENDCG
     }
