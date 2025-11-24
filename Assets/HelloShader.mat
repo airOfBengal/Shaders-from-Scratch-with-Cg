@@ -90,7 +90,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _bumpScale: 4.74
+    - _bumpScale: 4.81
     - _myFloat: 0.5
     - _myRange: 1
     - _texScale: 1

@@ -29,10 +29,9 @@ Shader "Custom/BumpedDiffuse"
 
         void surf (Input IN, inout SurfaceOutput o)
         {
-            o.Albedo = tex2D(_myTex, IN.uv_myTex).rgb;
-            o.Normal = UnpackNormal(tex2D(_myBump, IN.uv_myBump));
-            o.Normal.xy *= _bumpScale;
-            // IN.uv_myTex *= _texScale;
+            o.Albedo = tex2D(_myTex, IN.uv_myTex * _texScale).rgb;
+            o.Normal = UnpackNormal(tex2D(_myBump, IN.uv_myBump * _texScale));
+            o.Normal.xy *= _bumpScale;            
         }
         ENDCG
     }
